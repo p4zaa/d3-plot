@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Temperature Anomalies</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Global Temperature Anomalies (1880 - Present)</h1>
+    <div class="controls">
+        <button id="playButton">Play</button>
+        <button id="pauseButton" disabled>Pause</button>
+        <label for="yearRange">Year: </label>
+        <input type="range" id="yearRange" name="yearRange" min="1880" max="2020" value="2020" oninput="updateChart()">
+        <span id="yearRangeLabel">2020</span>
+    </div>
+    <div id="chart"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
